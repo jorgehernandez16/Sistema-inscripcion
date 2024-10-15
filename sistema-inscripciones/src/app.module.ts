@@ -8,24 +8,17 @@ import { PruebaModule } from './prueba/prueba.module'; // Si tienes uno para pru
   imports: [
     TypeOrmModule.forRoot({
       
-      type: 'sqlite', // Cambia a 'sqlite' para usar SQLite
-      database: 'path/to/your/database.sqlite', // Usar base de datos en memoria
+      type: 'sqlite', // sqlite' para usar SQLite
+      database: ':memory', // Usar base de datos en memoria
 
-      
-      /* type: 'mysql', // o el tipo que estés usando
-      host: 'localhost',
-      port: 3306,
-      username: 'tu_usuario',
-      password: 'tu_contraseña',
-      database: 'tu_base_de_datos', */
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
 
-    TypeOrmModule.forFeature([AtletaModule,InscripcionModule,PruebaModule]),
-/*     AtletaModule,
+    AtletaModule,
     InscripcionModule,
-    PruebaModule,  */
+    PruebaModule,
+
   ],
 })
 export class AppModule {}

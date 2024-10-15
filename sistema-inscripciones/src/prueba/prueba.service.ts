@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Prueba } from './prueba.entity';
+import { PruebaRepository } from './prueba.repository';
 
 @Injectable()
 export class PruebaService {

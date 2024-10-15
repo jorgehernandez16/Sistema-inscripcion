@@ -34,7 +34,7 @@
     methods: {
       async registrarAtleta() {
         try {
-          const response = await axios.post('/atletas', {
+          const response = await axios.post('http://localhost:3000/atleta/inscribir', {
             nombre: this.nombre,
             documento: this.documento,
             fechaNacimiento: this.fechaNacimiento,
